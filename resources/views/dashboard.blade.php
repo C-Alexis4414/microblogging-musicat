@@ -2,7 +2,7 @@
     <div >
         <x-slot name="header">
             <h2 class=" text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
+                {{ __('Hey ! This is your profile') }}
             </h2>
         </x-slot>
 
@@ -48,7 +48,9 @@
                     class="w-10 h-10 rounded-full overflow-hidden"/>
                 </div>
                 <div class="pl-2 pt-2 ">
-                  <p class="font-bold">{{$post -> User -> name}}</p>
+                  <a href="/users/{{$post -> User -> id}}" class="text-green-800  md:mb-2 lg:mb-0">
+                    <p class="font-bold">{{$post -> User -> name}}</p>
+                  </a>
                   <p class="text-xs">{{$post -> created_at}}</p>
                 </div>
               </div>
